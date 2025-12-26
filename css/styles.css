@@ -39,24 +39,44 @@ section {
   margin: auto;
 }
 
-/* BOTÓN WHATSAPP */
-.whatsapp {
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
   position: fixed;
-  bottom: 18px;
-  right: 18px;
-  background: var(--green);
-  color: #fff;
+  bottom: 20px;
+  right: 20px;
+
   width: 56px;
   height: 56px;
+
+  background-color: #25D366;
+  color: #ffffff;
+
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+
+  font-size: 30px;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-  z-index: 999;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Hover */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Opcional: quitar subrayado en mobile */
+.whatsapp-float:visited {
+  color: #ffffff;
+}
+
 
 /* HERO */
 .hero {
@@ -276,7 +296,6 @@ img {
   height: auto;
   display: block;
 }
-
 
 
 
